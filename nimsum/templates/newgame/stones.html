@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Step 2: Specify The Number Of Stones In Each Pile{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+      {% for pile in session.get('pile_names') %}
+        <label for="{{pile}}">{{pile}}</label>
+        <input name="{{pile}}" id="{{pile}}" required>
+      {% endfor %}
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

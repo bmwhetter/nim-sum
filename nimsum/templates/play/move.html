@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}
+      Game In Session! Choose a pile and number of stones to take.
+      {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <p>
+        {{g.position_string}}
+    </p>
+
+  <form method="post">
+    <label for="pile">Pile (For "pile 1" just put 1)</label>
+    <input name="pile" id="pile" required>
+    <label for="stones">Stones (To take 7 stones, put 7) </label>
+    <input name="stones" id="stones" required>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
