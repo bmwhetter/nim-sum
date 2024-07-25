@@ -10,6 +10,7 @@ from nimsum.db import get_db
 
 bp = Blueprint('newgame', __name__, url_prefix='/newgame')
 
+# random comment
 @bp.route('/piles', methods=('GET', 'POST'))
 def piles():
     # clear session before doing anything else
