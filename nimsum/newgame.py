@@ -12,6 +12,7 @@ bp = Blueprint('newgame', __name__, url_prefix='/newgame')
 
 # random comment
 # another random comment
+# another
 @bp.route('/piles', methods=('GET', 'POST'))
 def piles():
     # clear session before doing anything else
